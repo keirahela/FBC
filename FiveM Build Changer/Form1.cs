@@ -33,18 +33,6 @@ namespace FiveM_Build_Changer
 
 
 
-        public static string GetLocalIPAddress()
-        {
-            var host = Dns.GetHostEntry(Dns.GetHostName());
-            foreach (var ip in host.AddressList)
-            {
-                if (ip.AddressFamily == AddressFamily.InterNetwork)
-                {
-                    return ip.ToString();
-                }
-            }
-            throw new Exception("No network adapters with an IPv4 address in the system!");
-        }
 
 
 
@@ -52,7 +40,6 @@ namespace FiveM_Build_Changer
         {
             Dictionary<string, string> result =
             new Dictionary<string, string>();
-            string ip = GetLocalIPAddress();
             if (Properties.Settings.Default.serverfolder == false)
             {
 
@@ -124,10 +111,10 @@ namespace FiveM_Build_Changer
                                 Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\FBC");
                             }
                             new WebClient().DownloadFile(Link, Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\FBC\\server.7z");
-                            MessageBox.Show($"Succesfully downloaded build: {BuildNumber}\n\nSource: {Link}");
 
                             SevenZipNET.SevenZipExtractor zz = new SevenZipNET.SevenZipExtractor(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\FBC\\server.7z");
                             zz.ExtractAll(Properties.Settings.Default.hmhm);
+                            MessageBox.Show($"Succesfully downloaded / extracted build: {BuildNumber}\n\nSource: {Link}");
                         }
 
 
