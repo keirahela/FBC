@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31515.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FiveM Build Changer", "FiveM Build Changer\FiveM Build Changer.csproj", "{1E124DE8-B68D-4DE6-A51B-B36276338FAE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1E124DE8-B68D-4DE6-A51B-B36276338FAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E124DE8-B68D-4DE6-A51B-B36276338FAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E124DE8-B68D-4DE6-A51B-B36276338FAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E124DE8-B68D-4DE6-A51B-B36276338FAE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {73E082BC-BEE5-4974-B746-0F966C2FB4B7}
+	EndGlobalSection
+EndGlobal
