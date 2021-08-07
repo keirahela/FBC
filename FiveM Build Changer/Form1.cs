@@ -4,9 +4,6 @@ using System.Linq;
 using System.Windows.Forms;
 using System.Net;
 using System.IO;
-using HtmlAgilityPack;
-using Fizzler.Systems.HtmlAgilityPack;
-using HtmlDocument = HtmlAgilityPack.HtmlDocument;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Collections.Generic;
@@ -29,12 +26,6 @@ namespace FiveM_Build_Changer
 
 
         private static readonly HttpClient client = new HttpClient();
-
-
-
-
-
-
 
         private void guna2GradientButton1_Click(object sender, EventArgs e)
         {
@@ -97,17 +88,13 @@ namespace FiveM_Build_Changer
                             if (!result.TryGetValue(BuildNumber, out Link)) MessageBox.Show("An error occurred.");
 
                             bool fbcexists = Directory.Exists(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\FBC");
-                            bool fbcexists2 = Directory.Exists(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\FBCEXTRACT");
                             if (!fbcexists)
                             {
-                                if (!fbcexists2)
-                                {
-                                    Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\FBCEXTRACT");
-                                    Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\FBC");
-                                }
+                                Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\FBC");
                             }
                             else
                             {
+                                Directory.Delete(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\FBC");
                                 Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\FBC");
                             }
                             new WebClient().DownloadFile(Link, Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\FBC\\server.7z");
