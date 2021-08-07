@@ -25,6 +25,18 @@ namespace FiveM_Build_Changer.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string serverloc {
+            get {
+                return ((string)(this["serverloc"]));
+            }
+            set {
+                this["serverloc"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
         public bool serverfolder {
             get {
@@ -32,18 +44,6 @@ namespace FiveM_Build_Changer.Properties {
             }
             set {
                 this["serverfolder"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string hmhm {
-            get {
-                return ((string)(this["hmhm"]));
-            }
-            set {
-                this["hmhm"] = value;
             }
         }
     }
